@@ -28,6 +28,8 @@ const Timer = ({ setSessionsCompleted, currentTaskIndex }) => {
   useEffect(() => {
     if (!isRunning) return;
 
+    console.log('creating timer')
+
     const interval = setInterval(() => {
       setTimeLeft((prev) => {
         if (prev <= 0) {
@@ -44,7 +46,7 @@ const Timer = ({ setSessionsCompleted, currentTaskIndex }) => {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [isRunning, audio, customTime, setSessionsCompleted, currentTaskIndex]);
+  }, [isRunning, audio, customTime]);
 
   const formatTime = (seconds) => {
     const mins = Math.floor(seconds / 60);

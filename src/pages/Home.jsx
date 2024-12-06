@@ -82,9 +82,9 @@ const Home = () => {
                 }}
                 className={`cursor-pointer p-2 rounded-lg ${
                   currentTaskIndex === index
-                    ? "bg-blue-300 text-white" // Highlight the selected task
-                    : "bg-gray-100"
-                } dark:bg-gray-700`}
+                    ? "bg-blue-300 text-white dark:bg-blue-500" // Highlight in light and dark mode
+                    : "bg-gray-100 dark:bg-gray-700" // Default colors for light and dark mode
+                }`}
               >
                 {task.name}
               </li>
